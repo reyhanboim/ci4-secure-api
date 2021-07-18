@@ -33,6 +33,11 @@ $routes->setAutoRoute(true);
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::index');
+$routes->get('client', 'Client::index');
+$routes->post('client', 'Client::store');
+$routes->get('client/(:num)', 'Client::show/$1');
+$routes->post('client/(:num)', 'Client::update/$1');
+$routes->delete('client/(:num)', 'Client::destroy/$1');
 
 /*
  * --------------------------------------------------------------------
