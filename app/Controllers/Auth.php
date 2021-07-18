@@ -44,7 +44,7 @@ class Auth extends BaseController
     public function login()
     {
         $rules = [
-            'email' => 'required|min_length[6]|max_length[50]|valid_email|is_unique[user.email]',
+            'email' => 'required|min_length[6]|max_length[50]|valid_email',
             'password' => 'required|min_length[8]|max_length[255]|validateUser[email, password]'
         ];
 
